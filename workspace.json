@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "revolut": "apps/revolut",
+    "revolut-e2e": "apps/revolut-e2e"
+  }
+}

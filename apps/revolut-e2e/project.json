@@ -1,0 +1,28 @@
+{
+  "root": "apps/revolut-e2e",
+  "sourceRoot": "apps/revolut-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/revolut-e2e/cypress.json",
+        "devServerTarget": "revolut:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "revolut:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/revolut-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["revolut"]
+}
